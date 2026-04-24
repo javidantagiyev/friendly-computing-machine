@@ -22,8 +22,8 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 20% 50%, rgba(255, 105, 180, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 50%, rgba(192, 153, 255, 0.1) 0%, transparent 50%);
+    background: radial-gradient(circle at 20% 50%, rgba(150, 100, 200, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(120, 80, 180, 0.08) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -33,13 +33,13 @@ body::before {
 }
 
 .question-box {
-    background: rgba(20, 5, 40, 0.8);
-    border: 2px solid #ff69b4;
+    background: rgba(20, 5, 40, 0.85);
+    border: 2px solid #7a6db5;
     border-radius: 20px;
     padding: 60px 50px;
     text-align: center;
-    box-shadow: 0 0 40px rgba(255, 105, 180, 0.3),
-                inset 0 0 30px rgba(192, 153, 255, 0.1);
+    box-shadow: 0 0 30px rgba(120, 100, 180, 0.2),
+                inset 0 0 20px rgba(100, 80, 150, 0.1);
     backdrop-filter: blur(10px);
     animation: fadeInScale 0.8s ease-out;
     max-width: 500px;
@@ -58,27 +58,27 @@ body::before {
 }
 
 h1 {
-    color: #ff69b4;
+    color: #a8a0c8;
     font-size: 2.5em;
     margin-bottom: 15px;
-    text-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
-    animation: glow 2s ease-in-out infinite;
+    text-shadow: 0 0 15px rgba(168, 160, 200, 0.3);
+    animation: glow 3s ease-in-out infinite;
 }
 
 @keyframes glow {
     0%, 100% {
-        text-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+        text-shadow: 0 0 15px rgba(168, 160, 200, 0.3);
     }
     50% {
-        text-shadow: 0 0 30px rgba(255, 105, 180, 0.8);
+        text-shadow: 0 0 25px rgba(168, 160, 200, 0.5);
     }
 }
 
 .subtitle {
-    color: #c099ff;
+    color: #9080b0;
     font-size: 1.1em;
     margin-bottom: 40px;
-    opacity: 0.9;
+    opacity: 0.85;
 }
 
 .button-container {
@@ -102,14 +102,15 @@ h1 {
 }
 
 .yes-btn {
-    background: linear-gradient(135deg, #ff69b4, #ff1493);
-    color: white;
-    box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+    background: linear-gradient(135deg, #7a6db5, #6a5da5);
+    color: #d0c8e8;
+    box-shadow: 0 0 20px rgba(122, 109, 181, 0.3);
 }
 
 .yes-btn:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 40px rgba(255, 105, 180, 0.8);
+    box-shadow: 0 0 30px rgba(122, 109, 181, 0.5);
+    background: linear-gradient(135deg, #8a7dc5, #7a6db5);
 }
 
 .yes-btn:active {
@@ -117,14 +118,14 @@ h1 {
 }
 
 .no-btn {
-    background: linear-gradient(135deg, #6a5acd, #8a7ede);
-    color: white;
-    box-shadow: 0 0 15px rgba(192, 153, 255, 0.4);
+    background: linear-gradient(135deg, #5a4d7d, #4a3d6d);
+    color: #b8a8d0;
+    box-shadow: 0 0 15px rgba(90, 77, 125, 0.3);
     position: relative;
 }
 
 .no-btn:hover {
-    box-shadow: 0 0 25px rgba(192, 153, 255, 0.6);
+    box-shadow: 0 0 20px rgba(90, 77, 125, 0.4);
 }
 
 .success-message {
@@ -144,34 +145,15 @@ h1 {
 }
 
 .success-message h2 {
-    color: #ff69b4;
+    color: #a8a0c8;
     font-size: 2em;
     margin-bottom: 15px;
-    text-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+    text-shadow: 0 0 15px rgba(168, 160, 200, 0.3);
 }
 
 .success-message p {
-    color: #c099ff;
+    color: #9080b0;
     font-size: 1.1em;
-}
-
-/* Confetti styles */
-.confetti {
-    position: fixed;
-    pointer-events: none;
-    font-size: 2em;
-    z-index: 9999;
-}
-
-@keyframes fall {
-    to {
-        transform: translateY(100vh) rotate(360deg);
-        opacity: 0;
-    }
-}
-
-.confetti {
-    animation: fall 3s linear forwards;
 }
 
 /* Mobile responsiveness */
